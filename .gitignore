@@ -1,0 +1,7 @@
+
+*.zip
+*.userprefs
+Metadata.xml
+MonoMacWebView/src/bin
+MonoMacWebView/src/obj
+SwiftWebKit.xcworkspace
