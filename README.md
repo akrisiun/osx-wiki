@@ -13,6 +13,13 @@ nano
  ctrl+E , ctrl+O
 ```
 
+## Disk Size, mount devices
+
+```
+$ du -hs .
+$ df -h
+```
+
 ### Hello world .sh
 Save the following into a file called hello.sh:
 
