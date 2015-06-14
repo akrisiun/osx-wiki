@@ -1,0 +1,74 @@
+# nanoserver
+
+# Creating VM
+#Gen2
+New-Item "$VMPath\NanoGen2\Virtual Hard Disks" -ItemType Directory
+Copy-Item -Path "$Path\VHD\NanoServer.vhdx" -Destination "$VMPath\NanoGen2\Virtual Hard Disks\NanoServer.vhdx" -Force
+New-VM -VHDPath "$VMPath\NanoGen2\Virtual Hard Disks\NanoServer.vhdx" -MemoryStartupBytes 1024MB -Name NanoServerGen2 -Path $VMPath\NanoGen2 -Generation 2
+Set-VMMemory -VMName NanoServerGen2 -DynamicMemoryEnabled $True -MaximumBytes 1024MB -MinimumBytes 64MB -Buffer 10
+Set-VMProcessor -Count 2 -VMName NanoServerGen2
+Set-VM -AutomaticStopAction ShutDown -VMName NanoServerGen2
+
+#Gen1
+
+New-Item "$VMPath\NanoGen1\Virtual Hard Disks" -ItemType Directory
+Copy-Item -Path "$Path\VHD\NanoServer.vhd" -Destination "$VMPath\NanoGen1\Virtual Hard Disks\NanoServer.vhd"
+New-VM -VHDPath "$VMPath\NanoGen1\Virtual Hard Disks\NanoServer.vhd" -MemoryStartupBytes 1024MB -Name NanoServerGen1 -Path $VMPath\NanoGen1 -Generation 1
+
+Set-VMMemory -VMName NanoServerGen1 -DynamicMemoryEnabled $True -MaximumBytes 1024MB -MinimumBytes 64MB -Buffer 10
+Set-VMProcessor -Count 2 -VMName NanoServerGen1
+Set-VM -AutomaticStopAction Sh
+
+
+
+cd \NanoServer
+md mountdir
+dism\dism /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
+dism\dism /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-Compute-Package.cab /Image:.\mountdir
+dism\dism /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-Compute-Package.cab /Image:.\mountdir
+dism\dism /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-OEM-Drivers-Package.cab /Image:.\mountdir
+dism\dism /Add-Package /PackagePath:.\packages\en-US\Microsoft-NanoServer-OEM-Drivers-Package.cab /Image:.\mountdir
+dism\dism /Unmount-Image /MountDir:.\MountDir /Commit
+
+Place the edited Unattend.xml file in the C:\NanoServer folder. Then mount the VHD and apply the offlineServicing settings with these commands from and elevated command prompt:
+dism\dism /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
+dism\dism /image:.\mountdir /Apply-Unattend:.\unattend.xml
+Create a “Panther” folder (used by Windows systems for storing files during setup; see Windows 7, Windows Server 2008 R2, and Windows Vista setup log file locations if you’re curious), copy the Unattend.xml file to it, and then unmount the VHD with these commands:
+md .\mountdir\windows\panther
+copy .\unattend.xml .\mountdir\windows\panther
+dism\dism /Unmount-Image /MountDir:.\mountdir /Commit
+
+
+
+
+use a unattend file like this one (special for Nano Server) :
+ 
+<?xml version='1.0' encoding='utf-8'?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <settings pass="offlineServicing">
+    <component name="Microsoft-Windows-UnattendedJoin" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <ComputerName>NanoServer</ComputerName>
+    </component>
+  </settings>
+  <settings pass="oobeSystem">
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <UserAccounts>
+        <AdministratorPassword>
+           <Value>MySecurePassword</Value>
+           <PlainText>true</PlainText>
+        </AdministratorPassword>
+      </UserAccounts>
+      <TimeZone>Pacific Standard Time</TimeZone>
+    </component>
+  </settings>
+  <settings pass="specialize">
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <RegisteredOwner>ItForDummies</RegisteredOwner>
+      <RegisteredOrganization>ItForDummies</RegisteredOrganization>
+    </component>
+  </settings>
+</unattend>
+
+# You may need to edit your trusted host:
+Set-Item WSMan:\localhost\Client\TrustedHosts -Value 192.168.1.21 -Concatenate
+

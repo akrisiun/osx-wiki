@@ -1,0 +1,41 @@
+# https://docs.docker.com/machine/#getting-started-with-docker-machine-using-a-local-vm
+
+Options:
+'''
+--hyper-v-boot2docker-location: Location of a local boot2docker iso to use. Overrides the URL option below.
+--hyper-v-boot2docker-url: The URL of the boot2docker iso. Defaults to the latest available version.
+--hyper-v-disk-size: Size of disk for the host in MB. Defaults to 20000.
+--hyper-v-memory: Size of memory for the host in MB. Defaults to 1024. The machine is setup to use dynamic memory.
+--hyper-v-virtual-switch: Name of the virtual switch to use. Defaults to first found.
+'''
+
+Initiate the connection normally with SSH
+'''
+putty / ssh docker@<IP.address>
+Note that the default username / password is : docker / tcuser
+'''
+see the section on SSH at https://github.com/boot2docker/boot2docker for more information.
+
+# format /dev/sda
+
+'''
+sudo fdisk /dev/sda
+'''
+n - new
+e - extended
+partion 1
+first cylinder 1
+last: enter (default = 16478 or 2610)
+
+http://cicoria.blob.core.windows.net/blog/images/DockerHyperV-0011.png
+
+'''
+sudo mkfs.ext4 -L boot2docker-data /dev/sda
+'''
+
+# tutorial
+
+### https://www.docker.com/tryit/
+'''
+docker pull learn/tutorial
+'''
