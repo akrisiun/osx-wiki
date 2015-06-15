@@ -11,7 +11,29 @@ docker commit <> an_sup
 docker run -d -p 0.0.0.0:80:80 an_sup /usr/sbin/apachectl -D FOREGROUND
 ```
 
-### for Hyper-V
+### docker-machine for VirtualBox
+
+```
+dock create --driver virtualbox dev
+```
+
+### docker-machine for VmVare
+
+http://blogs.vmware.com/performance/2014/10/docker-containers-performance-vmware-vsphere.html
+
+### docker-machine for Hyper-V
+
+https://msopentech.com/blog/2015/02/26/swarms-docker-machines/
+
+To create a Docker host on your local Windows machine you simply run:
+```
+docker-machine create –d hyper-v localDev
+```
+To create a Docker host on Azure you use:
+docker-machine create -d azure --azure-subscription-id="SUB_ID" --azure-subscription-cert="mycert.pem" cloudDev
+
+
+
 ```
 ssh docker@ip (tcuser)
 
