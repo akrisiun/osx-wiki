@@ -1,0 +1,12 @@
+
+*.zip
+*.userprefs
+Metadata.xml
+MonoMacWebView/src/bin
+MonoMacWebView/src/obj
+SwiftWebKit.xcworkspace
+
+public_html/web.config
+monohttpd/
+original/
+private-apache/
