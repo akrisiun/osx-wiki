@@ -12,10 +12,11 @@ docker run -d -p 0.0.0.0:80:80 an_sup /usr/sbin/apachectl -D FOREGROUND
 ```
 
 ### for Hyper-V
-```
-ssh docker@ip (tcuser)
+`ssh docker@ip (tcuser)`
 
 # docker images
+
+```
 sudo docker run -d --name ubuntu1 ubuntu 
 
 docker run -d -p 127.0.0.1:3000:80 coreos/apache /usr/sbin/apache2ctl -D FOREGROUND
@@ -40,11 +41,14 @@ docker run -d -p 127.0.0.1:8080:80 an_sup /usr/sbin/apachectl -D FOREGROUND
 docker run -d -p 0.0.0.0:80:80 an_sup /usr/sbin/apachectl -D FOREGROUND
 '''
 
-### remove dangling conaineers
+### remove dangling containers
+
 '''
 docker rmi -f $(docker images -q -a -f dangling=true)
 '''
+
 ### run with ports
+
 '''
 docker run -p 127.0.0.1:8069:8069 --name odoo --link db:db -t odoo
 
@@ -55,15 +59,16 @@ custom conf:
 docker run -v /path/to/config:/etc/odoo -p 127.0.0.1:8069:8069 --name odoo --link db:db -t odoo
 
 docker run -p 0.0.0.0:8069:8069 --name odoo1 --link db:db -t odoo
-
-# $ sudo docker -H 0.0.0.0:5555 -d &
+sudo docker -H 0.0.0.0:5555 -d &
+```
 
 ### ubuntu
 
+```
 version
 cat /etc/issue
 systemctl restart docker
-
+```
 
 #create a file called "Dockerfile" with the following contents.
 
