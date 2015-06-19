@@ -1,11 +1,11 @@
 ## osx + linux wiki
 
-links:
-[etho.md]
-[cntlm.md]
-[docker-wiki.md]
-[odoo-postgres.md]
-[mono.md]
+wiki parts:
+[etho.md](etho.md)
+[cntlm.md](cntlm.md)
+[docker-wiki.md](docker-wiki.md)
+[odoo-postgres.md](odoo-postgres.md)
+[mono.md](mono.md)
 
 ### set path, editor
 
@@ -20,6 +20,16 @@ ls -l /etc/paths.d/
 set
 nano  
 ctrl+E , ctrl+O
+```
+
+### adduser addgroup chown chgrp chmod
+https://en.wikipedia.org/?title=Chmod
+
+```
+adduser x staff
+chgrp staff x
+chmod 664 index.html
+chmod 775 ./run
 ```
 
 ## Disk Size, mount devices
