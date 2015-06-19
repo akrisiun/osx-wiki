@@ -1,16 +1,25 @@
 ## osx + linux wiki
 
-### set path
+links:
+[etho.md]
+[cntlm.md]
+[docker-wiki.md]
+[odoo-postgres.md]
+[mono.md]
+
+### set path, editor
+
 http://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/
 
-```
 .bash
+```
 echo $PATH
+export PATH=
 ls -l /etc/paths.d/
 
 set
 nano  
- ctrl+E , ctrl+O
+ctrl+E , ctrl+O
 ```
 
 ## Disk Size, mount devices
