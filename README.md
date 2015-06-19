@@ -1,7 +1,7 @@
 ## osx + linux wiki
 
 wiki parts:
-[etho.md](etho.md)
+[eth0.md](eth0.md)
 [cntlm.md](cntlm.md)
 [docker-wiki.md](docker-wiki.md)
 [odoo-postgres.md](odoo-postgres.md)
@@ -30,9 +30,19 @@ adduser x staff
 chgrp staff x
 chmod 664 index.html
 chmod 775 ./run
+chgrp -R _www wwwroot
+```
+-R recursive
+
+### linux kernel and distribution version
+
+```
+uname -a
+cat /etc/issue
+version
 ```
 
-## Disk Size, mount devices
+### Disk Size, mount devices
 
 ```
 $ du -hs .
@@ -74,8 +84,10 @@ ps aux | grep root
 
 ### mono ASP.NET
 
-```sudo xsp4 --port 80 --root ~/public_html
 ```
+sudo xsp4 --port 80 --root ~/public_html
+```
+
 ## setup gcloud
 
 sudo nano /etc/paths.d/gcloud
