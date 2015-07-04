@@ -1,4 +1,36 @@
-# https://docs.docker.com/machine/#getting-started-with-docker-machine-using-a-local-vm
+### https://docs.docker.com/machine/#getting-started-with-docker-machine-using-a-local-vm
+
+docker-machine for hyper-v
+
+/bin/
+ps1
+> docker-machine.exe 
+
+docker-machine ls
+docker-machine create -d hyper-v
+docker-machine stop dockervm
+docker-machine start dockervm
+docker-machine ls
+
+````
+
+
+### digitalocean cloud
+
+```
+docker-machine create -d digitalocean --digitalocean-access-token=b096***** stage
+
+```
+AUTHENTICATE WITH A BEARER AUTHORIZATION HEADER
+
+curl -X $HTTP_METHOD -H "Authorization: Bearer $TOKEN" "https://api.digitalocean.com/v2/$OBJECT" 
+AUTHENTICATE WITH BASIC AUTHENTICATION
+
+curl -X $HTTP_METHOD -u "$TOKEN:" "https://api.digitalocean.com/v2/$OBJECT"
+```
+
+
+### boot2docker for hyper-v
 
 Options:
 '''

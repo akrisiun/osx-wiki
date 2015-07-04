@@ -1,73 +1,17 @@
-# docker with postgres for odoo
+### nginx
 
-start a postgres instance
-'''
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-'''
-This image includes EXPOSE 5432 (the postgres port), so standard container linking will 
-make it automatically available to the linked containers. The default postgres user and database are created in the entrypoint with initdb.
-
-The postgres database is a default database meant for use by users, utilities and third party applications.
-http://postgresql.org/docs connect to it from an application
-
-'''
-docker run --name some-app --link some-postgres:postgres -d application-that-uses-postgres
-
-# or via psql
-docker run -it --link some-postgres:postgres --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U postgres'
-
-docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo --name db postgres
-docker run -p 0.0.0.0:8069:8069 --name odoo --link db:db -t odoo
-
-docker run -p 0.0.0.0:5432:5432 -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo --name db postgres_1
-docker run -p 0.0.0.0:8069:8069 --name odoo2 --link db:db -t odoo_2
-
-sudo iptables -L -n
 ```
-
-https://docs.docker.com/examples/postgresql_service/
-
-#### system level postgress backup
-
-tar -cf backup.tar /usr/local/pgsql/data
-
-export TERM=linux
-apt-get install -y postgresql-client
-
-### pg_dump
-`./pg_dump -U postgres -Fc -f /home/user/sample_backup sample`
-
- ./pg_restore -l /home/user/sample_backup
-
-./pg_restore -d postgres -U postgres -C /home/user/sample_backup
-
-
-sudo docker run -p 0.0.0.0:8081:5000 --name webapp1 --link db:db -t training/webapp
-
-sudo docker run –p 0.0.0.0:8088:1880 -d --name nodered1  node-red
-
-# Invalid repository name (–p), only [a-z0-9-_.] are allowed
-# https://github.com/node-red/node-red/blob/master/settings.js
-
-sudo docker run cpswan/node-red:latest
-sudo docker commit <> nodered
-
-docker run --name=nodered -d -v /home/core/projekte/nodered/:/root/.node-red -p 1881:1880 cpswan/node-red
-
-sudo docker run –p 0.0.0.0:8088:1880 --name nodered1 nodered
-
-
 docker pull dockerfile/nginx
-
+```
 (alternatively, you can build an image from Dockerfile: docker build -t="dockerfile/nginx" github.com/dockerfile/nginx)
 
-Usage
-
+###Usage
+```
 docker run -d -p 80:80 dockerfile/nginx
-Attach persistent/shared directories
+#Attach persistent/shared directories
 
 docker run -d -p 80:80 -v <sites-enabled-dir>:/etc/nginx/conf.d -v <certs-dir>:/etc/nginx/certs -v <log-dir>:/var/log/nginx -v <html-dir>:/var/www/html dockerfile/nginx
-After few seconds, open http://<host> to see the welcome page.
+#After few seconds, open http://<host> to see the welcome page.
 	
 sudo docker run -d -p 0.0.0.0:8084:80 -v /data/wwwdata/conf:/etc/nginx/conf.d -v /data/wwwdata/certs:/etc/nginx/certs -v /data/wwwdata/log:/var/log/nginx -v /data/wwwdata/html:/var/www/html nginx
 sudo docker start ngnet4
@@ -75,7 +19,6 @@ sudo docker start ngnet4
 nginx -t
 nginx -s reload
 service --status-all
-
 	
 	    access_log  /var/log/nginx/access.log  main;
 	
@@ -102,15 +45,19 @@ service --status-all
 		 }
 	
 	}
+```
 	
- /etc/nginx/fastcgi_params.
+### /etc/nginx/fastcgi_params.
 
+```
  fastcgi_param  PATH_INFO          "";
  fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
- 
- 
+``` 
+### mono-on-nginx with cgi .aspx
+
  http://www.philliphaydon.com/2013/06/setting-up-mono-on-nginx/
- 
+
+``` 
  apt-get install mono-complete -y
  apt-get install mono-fastcgi-server4 -y
  
@@ -130,9 +77,7 @@ exec /usr/bin/fastcgi-mono-server4 /applications=/:/usr/aspnet/ /socket=tcp:127.
 exec /usr/sbin/nginx &
 exec tail -f /usr/aspnet/packages.config 
 	
-
 <%@ Page Language="C#" AutoEventWireup="true" %>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -146,3 +91,23 @@ exec tail -f /usr/aspnet/packages.config
     </div>
 </body>
 </html>
+```
+
+### node-red utility https://github.com/node-red/node-red
+
+A visual tool for wiring the Internet of Things
+```
+sudo docker run -p 0.0.0.0:8081:5000 --name webapp1 --link db:db -t training/webapp
+sudo docker run –p 0.0.0.0:8088:1880 -d --name nodered1  node-red
+```
+limitation: Invalid repository name (–p), only [a-z0-9-_.] are allowed
+### https://github.com/node-red/node-red/blob/master/settings.js
+
+```
+sudo docker run cpswan/node-red:latest
+sudo docker commit <> nodered
+
+docker run --name=nodered -d -v /home/core/projekte/nodered/:/root/.node-red -p 1881:1880 cpswan/node-red
+
+sudo docker run –p 0.0.0.0:8088:1880 --name nodered1 nodered
+```
