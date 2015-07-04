@@ -7,6 +7,9 @@ docker run learn/tutorial echo "hello world"
 docker pull ubuntu
 docker run -it ubuntu /bin/bash
 
+docker run -it ubuntu /bin/bash
+docker run -d -p 0.0.0.0:82:80 ubuntu /bin/bash
+
 docker commit <> an_sup
 docker run -d -p 0.0.0.0:80:80 an_sup /usr/sbin/apachectl -D FOREGROUND
 ```

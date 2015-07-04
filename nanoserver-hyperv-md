@@ -9,8 +9,7 @@ Set-VMMemory -VMName NanoServerGen2 -DynamicMemoryEnabled $True -MaximumBytes 10
 Set-VMProcessor -Count 2 -VMName NanoServerGen2
 Set-VM -AutomaticStopAction ShutDown -VMName NanoServerGen2
 
-#Gen1
-
+#### Gen1
 New-Item "$VMPath\NanoGen1\Virtual Hard Disks" -ItemType Directory
 Copy-Item -Path "$Path\VHD\NanoServer.vhd" -Destination "$VMPath\NanoGen1\Virtual Hard Disks\NanoServer.vhd"
 New-VM -VHDPath "$VMPath\NanoGen1\Virtual Hard Disks\NanoServer.vhd" -MemoryStartupBytes 1024MB -Name NanoServerGen1 -Path $VMPath\NanoGen1 -Generation 1

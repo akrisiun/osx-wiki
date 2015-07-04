@@ -20,6 +20,9 @@ http://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-vari
 
 .bash
 ```
+# enviroment
+env
+
 echo $PATH
 export PATH=
 ls -l /etc/paths.d/

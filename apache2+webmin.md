@@ -1,5 +1,9 @@
 ### apache2
 
+```
+sudo apachectl graceful
+```
+
 #### webmin
 
 file:
@@ -19,7 +23,7 @@ ca=/etc/webmin/acl/ca.pem
 
 https://www.digitalocean.com/community/tutorials/how-to-install-munin-on-an-ubuntu-vps
 
-conf
+.conf
 ```
 sudo nano /etc/munin/munin.conf
 dbdir /var/lib/munin
@@ -39,7 +43,8 @@ Alias /munin /var/www/munin
 	Options None
 	
 ```	
-Next, you will need to create the directory path that you referenced in the munin.conf file and modify the ownership to allow munin to write to it:
+Next, you will need to create the directory path that you referenced in the munin.conf file and modify th
+e ownership to allow munin to write to it:
 
 ```
 sudo mkdir /var/www/munin
@@ -52,13 +57,11 @@ sudo apachectl graceful
 sudo nano /etc/munin/munin-node.conf
 allow ^123\.456\.78\.100$
 ```
-
-If you have installed the Net::CIDR perl module:
-cidr_allow 192.0.2.0/24
+If you have installed the Net::CIDR perl module: cidr_allow 192.0.2.0/24
 
 port 4949
-
 apache.conf
+
 '''
 <Directory /var/cache/munin/www>
      Order allow,deny
@@ -67,6 +70,8 @@ apache.conf
         # Options None
      Allow from all
      Options FollowSymLinks SymLinksIfOwnerMatch
+    
+sudo nano -w /etc/munin/plugin-conf.d/munin-node     
 '''
 
 ### http://linuxdev.dk/articles/monitoring-munin
@@ -75,11 +80,24 @@ Munin plugins actually live in /usr/share/munin/plugins, and are symlinked to in
 ```
 sudo ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/apache_accesses
 sudo ln -s /usr/share/munin/plugins/apache_activity /etc/munin/plugins/apache_activity
+sudo rm /etc/munin/plugins/apache_activity
 sudo ln -s /usr/share/munin/plugins/apache_processes /etc/munin/plugins/apache_processes
 sudo ln -s /usr/share/munin/plugins/apache_volume /etc/munin/plugins/apache_volume
 
+sudo ln -s /usr/share/munin/plugins/postgres_connections_db /etc/munin/plugins/postgres_connections_db
+sudo ln -s /usr/share/munin/plugins/postgres_xlog /etc/munin/plugins/postgres_xlog
+
 sudo nano -w /etc/munin/plugin-conf.d/munin-node
+[apache_*]
+env.url http://localhost:%d/server-status?auto
+env.ports 80
+
+# then:
+sudo apachectl graceful
+sudo /etc/init.d/munin restart
 sudo /etc/init.d/munin-node restart
+
+sudo service munin-node restart
 ```
 
 #### SSH access to the node
@@ -94,6 +112,8 @@ Add the node to the Munin front-end by edit munin.conf and add the node the the 
     address 127.0.0.1
     port <local port>
     use_node_name yes
-To create the SSH tunnel after a reboot you can add the following command to "/etc/rc.local". It do require that you have a user that are allowed to ssh into the remote server without password (public/private keys).
+
+To create the SSH tunnel after a reboot you can add the following command to "/etc/rc.local".
+ It do require that you have a user that are allowed to ssh into the remote server without password (public/private keys).
 ```
 

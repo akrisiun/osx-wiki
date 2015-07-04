@@ -27,8 +27,31 @@ sudo /etc/init.d/networking restart
 /sbin/ifconfig eth0 up
 /sbin/ifconfig eth0 down
 ip addr
+sudo iptables -L -n
 ifconfig eth0
 ```
+
+### format fdisk
+
+Question How to format a new hard disk - http://ubuntuforums.org/showthread.php?t=267869
+```
+df -h
+mount | grep sda1
+umount -l /dev/sda1
+sudo fdisk -l /def/sda
+# n - new partition
+# p - primary
+# 1 - partition number
+
+# then format:
+sudo mkfs.ext3 /dev/sda1
+
+sudo mkdir /media
+sudo mkdir /media/sda1
+sudo mount /dev/sda1 /media/sda1
+df -h 
+```
+
 
 ### http://www.tecmint.com/ifconfig-command-examples/
 
