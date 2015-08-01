@@ -59,6 +59,12 @@ $ du -hs .
 $ df -h
 ```
 
+### Change time zone
+
+```
+sudo dpkg-reconfigure tzdata
+```
+
 ### Hello world .sh
 Save the following into a file called hello.sh:
 
