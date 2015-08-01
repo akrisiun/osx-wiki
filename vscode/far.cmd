@@ -1,0 +1,1 @@
+"c:\Program Files\Far Manager\Far.exe"

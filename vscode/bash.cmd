@@ -1,0 +1,1 @@
+"c:\Program Files (x86)\Git\bin\bash.exe" %1 %2

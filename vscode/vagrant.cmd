@@ -1,0 +1,1 @@
+c:\bin\Vagrant\bin\vagrant.exe %1 %2 %3 %4
