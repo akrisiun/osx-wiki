@@ -9,6 +9,16 @@ vncserver :0 -geometry 1920x1080 -depth 24
 vncserver :0 -geometry 1600x900 -depth 24
 ```
 
+### rpi player omxplayer
+
+```
+omxplayer -display 0 -p -o hdmi <file>
+```
+
+### client for Os X
+  
+vnc://192.168.1.*:5900
+  
 ### client for Windows
 
 TightVnc viewer
