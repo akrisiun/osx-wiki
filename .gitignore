@@ -1,13 +1,25 @@
 
 *.zip
+*.bak
 *.userprefs
 Metadata.xml
 MonoMacWebView/src/bin
 MonoMacWebView/src/obj
 SwiftWebKit.xcworkspace
+*.nlp
 
+.vs/
+.git/
+.svn/
 public_html/web.config
 monohttpd/
 original/
 private-apache/
 vnext/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.doc*
+*.xls*
+
+
