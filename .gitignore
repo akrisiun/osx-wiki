@@ -22,4 +22,13 @@ obj/
 *.doc*
 *.xls*
 
+gtkA/
+.test/
+.tmp/
+.temp/
+.arch/
+
+*.config
+*.conf
+*.ini
 
