@@ -4,15 +4,15 @@ wiki parts:
 [eth0.md](eth0.md), 
 [cntlm.md](cntlm.md), 
 [apache2+webmin.md](apache2+webmin.md)  
+[ftp.md](ftp.md)
+[vboxManage.md](vboxManage.md)
   
-Docker
-[docker-wiki.md](docker-wiki.md), 
-[odoo-postgres.md](odoo-postgres.md)  
-
 .NET 
 [mono.md](mono.md)
 [libuv-make.cmd](libuv-make.cmd)  
-
+Docker
+[docker-wiki.md](docker-wiki.md), 
+[odoo-postgres.md](odoo-postgres.md)  
 
 ### set path, editor
 

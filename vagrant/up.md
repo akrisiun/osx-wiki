@@ -34,6 +34,12 @@ sudo dhclient eth0
 sudo aptitude install openssh-server
 ```
 	 
+### User
+
+vagrant:vagrant
+sudo adduser XX 
+sudo adduser XX staff
+	 
 ### Basics
 
 for VirtualBox
