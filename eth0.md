@@ -15,10 +15,20 @@ auto eth0
    gateway 46.185.128.91
 ```
 
+### open ports
+
+```
+netstat -p tcp
+watch netstat -tn
+
+sudo apt-get install -y nmap
+nmap 127.0.0.1
+```
+
 ### for dhcp: Replace it with
 ```
 auto eth0
-   iface eth0 inet dhcp
+iface eth0 inet dhcp
 ```
 #### Then restart networking components.
 ```
@@ -79,6 +89,8 @@ https://docs.docker.com/articles/networking/#building-your-own-bridge
 
 ```
 ip addr
+ipconfig | grep addr
+watch netstat -tn
 ```
 
 Starting with Docker v.1.2.0, you can now edit

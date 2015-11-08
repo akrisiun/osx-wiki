@@ -7,35 +7,56 @@ Server:
 vncserver :0 -geometry 1920x1080 -depth 24
 
 vncserver :0 -geometry 1600x900 -depth 24
+vncserver -kill :1
+vncserver :1 -geometry 1600x900
+
+ipconfig | grep addr
+watch netstat -tn
+
+vnc://192.168.1.*:5901
+vnc://192.168.2.21:5901
 ```
+
+### SSH only
+
+```
+ssh -p 22 -l <user> -X -v 192.168.1.*
+xcalc
+xclock
+
+# diagnostics on remote host
+watch netstat -tn
+```
+
+### client for Os X
+  
+https://www.nomachine.com/
+nxserver
+
+osx screen sharing:
+  
+vnc://192.168.1.*:5900
+vnc://192.168.1.*:5901
+  
+### client for Windows
+
+TightVnc viewer
+*
+	<a href="http://www.tightvnc.com/download/2.7.10/tightvnc-2.7.10-setup-64bit.msi" 
+	>
+	<b>Installer for Windows (64-bit)</b></a>
+	(2,367,488 bytes)
+*
+	<a href="http://www.tightvnc.com/download/2.7.10/tightvnc-2.7.10-setup-32bit.msi" >
+
+	<b>Installer for Windows (32-bit)</b></a>
+	(2,105,344 bytes)
 
 ### rpi player omxplayer
 
 ```
 omxplayer -display 0 -p -o hdmi <file>
 ```
-
-### client for Os X
-  
-vnc://192.168.1.*:5900
-  
-### client for Windows
-
-TightVnc viewer
-
-<ul>
-<li>
-	<a href="http://www.tightvnc.com/download/2.7.10/tightvnc-2.7.10-setup-64bit.msi" 
-	>
-	<b>Installer for Windows (64-bit)</b></a>
-	(2,367,488 bytes)
-</li>
-<li style="margin-top: 0.5em; margin-bottom: 0.5em;">
-	<a href="http://www.tightvnc.com/download/2.7.10/tightvnc-2.7.10-setup-32bit.msi" >
-
-	<b>Installer for Windows (32-bit)</b></a>
-	(2,105,344 bytes)
-</li></ul>
 
 ### VNC server for OS-X
 
