@@ -15,6 +15,12 @@ auto eth0
    gateway 46.185.128.91
 ```
 
+Check open ports:
+```
+netstat -an -p tcp
+sudo diskutil list
+```
+
 ### for dhcp: Replace it with
 ```
 auto eth0
