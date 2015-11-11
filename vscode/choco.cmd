@@ -1,0 +1,1 @@
+c:\ProgramData\chocolatey\bin\choco.exe %1 %2 %3 %4

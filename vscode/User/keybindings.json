@@ -1,0 +1,19 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+]
+
+// - workbench.view.git
+// - workbench.action.git.executeGitCommands
+// - editor.debug.action.addWatchExpression
+// - editor.debug.action.runToCursor
+// - workbench.action.debug.configure
+// - workbench.action.tasks.terminate
+// - workbench.action.tasks.configureTaskRunner
+// - workbench.action.tasks.showLog
+// - workbench.action.tasks.runTask
+// - workbench.action.changeThemeToLight
+// - workbench.action.changeToDarkTheme
+// - workbench.action.changeToHighContrastTheme
+// - workbench.action.toggleDevTools
+// - workbench.action.zoomReset
+// - workbench.action.appPerf

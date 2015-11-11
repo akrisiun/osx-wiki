@@ -1,0 +1,41 @@
+// Place your settings in this file to overwrite the default settings
+{
+	// Controls after how many characters the editor will wrap to the next line. Setting this to 0 turns on viewport width wrapping
+	"editor.wrappingColumn": 90,
+	
+	//-------- Git configuration --------
+    // Is git enabled
+    "git.enabled": true,
+
+    // Whether auto fetching is enabled.
+    "git.autofetch": true,
+    
+    "files.exclude": {
+		"**/.git": true,
+        "**/.snv": true,
+        "**/.vscode": true,
+        "**/.settings": true,
+        "**/*.fxp": true,
+        "**/*.DBF": true,
+        "**/*.FPT": true,
+        "**/*.bak": true,
+        "**/*.BAK": true,
+        "**/*.PJ*": true,
+        "**/*.pj*": true,
+        "**/*.sc*": true,
+        "**/*.exe": true,
+        "**/*.app": true,
+        "**/*.FLL": true,
+        "**/*.mem": true,
+        "**/*.MEM": true,
+        "**/*.db": true,
+        "**/*.FXP": true,
+        "**/*.xls*": true,
+        "**/*.doc*": true,
+        "**/*.OCX*": true,
+        "**/*.ocx": true,
+        "**/*.dll": true,
+        "**/*.PNG": true,
+		"**/.DS_Store": true
+	},
+}
