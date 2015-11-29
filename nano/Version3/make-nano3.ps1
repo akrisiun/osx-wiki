@@ -1,0 +1,1 @@
+ New-NanoServerImage -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano2.vhd -GuestDrivers -Packages Microsoft-NanoServer-IIS-Package -Storage -Compute -Clustering  -ReverseForwarders -Containers -EnableRemoteManagementPort -ComputerName "Nano2"

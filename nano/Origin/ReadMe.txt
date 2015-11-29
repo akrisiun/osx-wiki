@@ -1,0 +1,1 @@
+For detailed information on deploying and managing Nano Server, please go to this link: http://www.aka.ms/nanoserver

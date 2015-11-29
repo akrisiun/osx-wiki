@@ -1,0 +1,55 @@
+F:
+dir *.* /S > d:\beta\NanoServer.log
+
+ Volume in drive F is J_SSS_X64FRE_EN-US_DV9
+
+Directory of f:\NanoServer
+
+2015-10-30  12:19           159 928 Convert-WindowsImage.ps1
+2015-10-30  12:19       136 954 140 NanoServer.wim
+2015-10-30  12:19            74 020 NanoServerImageGenerator.psm1
+2015-10-30  12:19    <DIR>          Packages
+2015-10-30  12:19               116 ReadMe.txt
+               4 File(s)    137 188 204 bytes
+
+ Directory of f:\NanoServer\Packages
+
+2015-10-30  12:19        14 668 155 Microsoft-NanoServer-Compute-Package.cab
+2015-10-30  12:19         9 158 588 Microsoft-NanoServer-Containers-Package.cab
+2015-10-30  12:19           117 542 Microsoft-NanoServer-DCB-Package.cab
+2015-10-30  12:19         1 718 550 Microsoft-NanoServer-DNS-Package.cab
+2015-10-30  12:19           512 929 Microsoft-NanoServer-DSC-Package.cab
+2015-10-30  12:19       130 448 756 Microsoft-NanoServer-Defender-Package.cab
+2015-10-30  12:19         8 578 261 Microsoft-NanoServer-FailoverCluster-Package.cab
+2015-10-30  12:19           620 742 Microsoft-NanoServer-Guest-Package.cab
+2015-10-30  12:19         1 922 047 Microsoft-NanoServer-IIS-Package.cab
+2015-10-30  12:19           168 468 Microsoft-NanoServer-NPDS-Package.cab
+2015-10-30  12:19        27 306 848 Microsoft-NanoServer-OEM-Drivers-Package.cab
+2015-10-30  12:19         9 931 218 Microsoft-NanoServer-Storage-Package.cab
+2015-10-30  12:19           615 099 Microsoft-OneCore-ReverseForwarders-Package.cab
+2015-10-30  12:19            52 406 Microsoft-Windows-Server-SCVMM-Compute-Package.cab
+2015-10-30  12:19           881 258 Microsoft-Windows-Server-SCVMM-Package.cab
+2015-10-30  12:19    <DIR>          en-us
+              15 File(s)    206 700 867 bytes
+
+ Directory of f:\NanoServer\Packages\en-us
+
+2015-10-30  12:19           344 182 Microsoft-NanoServer-Compute-Package.cab
+2015-10-30  12:19           252 904 Microsoft-NanoServer-Containers-Package.cab
+2015-10-30  12:19            17 754 Microsoft-NanoServer-DCB-Package.cab
+2015-10-30  12:19           133 614 Microsoft-NanoServer-DNS-Package.cab
+2015-10-30  12:19            72 789 Microsoft-NanoServer-DSC-Package.cab
+2015-10-30  12:19             6 252 Microsoft-NanoServer-Defender-Package.cab
+2015-10-30  12:19           140 780 Microsoft-NanoServer-FailoverCluster-Package.cab
+2015-10-30  12:19            43 744 Microsoft-NanoServer-Guest-Package.cab
+2015-10-30  12:19           126 005 Microsoft-NanoServer-IIS-Package.cab
+2015-10-30  12:19            11 293 Microsoft-NanoServer-NPDS-Package.cab
+2015-10-30  12:19           389 506 Microsoft-NanoServer-OEM-Drivers-Package.cab
+2015-10-30  12:19           197 535 Microsoft-NanoServer-Storage-Package.cab
+2015-10-30  12:19            14 705 Microsoft-OneCore-ReverseForwarders-Package.cab
+2015-10-30  12:19             6 479 Microsoft-Windows-Server-SCVMM-Compute-Package.cab
+2015-10-30  12:19             9 597 Microsoft-Windows-Server-SCVMM-Package.cab
+              15 File(s)      1 767 139 bytes
+
+     Total Files Listed:
+              34 File(s)    345 656 210 bytes
