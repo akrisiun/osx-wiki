@@ -1,19 +1,19 @@
-cmder
 d:
 cd d:\VM\nano-Work\nano3\
 
 ./Convert-WindowsImage.ps1 
 ./New-NanoServerImage.ps1
-./New-NanoServerVHD.ps1 -DestVHD d:\Work\nano3\Nano3.vhd -ComputerName Nano3 -AdministratorPassword 123 -Packages 'Storage','OEM-Drivers', 'Guest', 'Containers', 'IIS'
+
+./New-NanoServerVHD.ps1 -DestVHD d:\Work\nano3\Nano3.vhd -ComputerName Nano3
+     -AdministratorPassword 123 -Packages 'Storage','OEM-Drivers', 'Guest', 'Containers', 'IIS'
 
 
 DISM does not support servicing a Windows Vista RTM or earlier operating system.
 If the operating system is supported check that SSShim.DLL is present.
 
 To service this Windows image requires the latest version of the DISM. See 
-http://go.microsoft.com/fwlink/?LinkId=293395 
-to find the latest version of DISM, and 
-http://go.microsoft.com/fwlink/?LinkId=293394 
+http://go.microsoft.com/fwlink/?LinkId=293395  
+to find the latest version of DISM, and http://go.microsoft.com/fwlink/?LinkId=293394 
 to learn how to install the latest version of DISM from the ADK on your computer.
 
 -Sourcepath d:\Work\NanoServer.wim
@@ -33,6 +33,10 @@ https://dscottraynsford.wordpress.com/2015/08/27/docker-and-containers-on-nano-s
 
 New-NanoServerImage -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1.vhd -GuestDrivers 
 	-Packages Microsoft-NanoServer-IIS-Package
+	
+	
+./Convert-WindowsImage.ps1 -Sourcepath d:\Work\NanoServer.wim -VHD d:\Work\NanoServer.vhd -VHDformat VHD -Edition 1	
+
 If you have an existing VHD file, you can install IIS offline with DISM.exe by navigating to the directory where the Nano Server VHD is, mount the VHD, and use the Add-Package option. The specific commands are:
 md mountdir
 dism\dism /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
