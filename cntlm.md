@@ -1,5 +1,8 @@
 ### Configure Cntlm
 
+Cntlm is .cpp code proxy to access Internet thrown ISA Windows domain proxy.
+Alternative with Python: ntlmaps.md
+
 ```
 rpm -ivh cntlm-0.92.3-1.x86_64.rpm
 ```
