@@ -14,8 +14,9 @@ https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/co
 
 ### Powershell
 
-@PS 
-Get-VMSwitch | where {$_.SwitchType –eq “External”}
+@PS
+Get-VMSwitch * 
+Get-VMSwitch | where {$_.SwitchType –eq ‥External”}
 
 wget -uri https://aka.ms/tp4/New-ContainerHost -OutFile D:\vm\New-ContainerHost.ps1
 

@@ -5,8 +5,12 @@ Metadata.xml
 MonoMacWebView/src/bin
 MonoMacWebView/src/obj
 SwiftWebKit.xcworkspace
+[Ww]eb.config
+[Aa]eb.config
+http*.conf
 
-public_html/web.config
+.arch/
+.temp/
 monohttpd/
 original/
 private-apache/
@@ -14,3 +18,5 @@ vnext/
 mc/
 nano/dism/
 nano/Packages/
+appveyor/AppRolla/
+
