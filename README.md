@@ -64,6 +64,11 @@ $ df -h
 ```
 sudo dpkg-reconfigure tzdata
 ```
+### Find files
+
+```
+find /usr -iname "*libGL.so*" -exec ls -l {} \;
+```
 
 ### Hello world .sh
 Save the following into a file called hello.sh:
@@ -96,6 +101,7 @@ env
 
 ```
 ps aux | grep root
+env | grep DOCKER
 ```
 
 ## setup gcloud
