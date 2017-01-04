@@ -1,4 +1,3 @@
-[submodule "AppRolla"]
-	path = appveyor/AppRolla
+[submodule "vm/AppRolla"]
+	path = vm/AppRolla
 	url = https://github.com/appveyor/AppRolla.git
-	
