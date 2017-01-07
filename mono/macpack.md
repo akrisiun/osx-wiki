@@ -10,5 +10,4 @@ mcs -g -debug+ CurrencyConverter.cs -out:CurrencyConverter.exe -pkg:cocoa-sharp
 rm -rf CurrencyConverter.app
 macpack -m:2 -o:.  -r:/Library/Frameworks/Mono.framework/Versions/Current/lib/ libCocoaSharpGlue.dylib
         -r:CurrencyConverter.nib -n:CurrencyConverter -a:CurrencyConverter.exe
-```  
-
+```

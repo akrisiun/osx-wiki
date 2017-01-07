@@ -108,3 +108,43 @@ dock -d hyper-v Docker
 $ du -hs .
 $ df -h
 ```
+
+### Docker-machine
+
+https://docs.docker.com/machine/drivers/generic/
+
+```
+$ 
+docker-machine create \
+  --driver generic \
+  --generic-ip-address=203.0.113.81 \
+  --generic-ssh-key ~/.ssh/id_rsa \
+  vm
+
+# default values
+--generic-engine-port	GENERIC_ENGINE_PORT	2376
+--generic-ip-address	GENERIC_IP_ADDRESS	-
+--generic-ssh-key	    GENERIC_SSH_KEY	    -
+--generic-ssh-user	    GENERIC_SSH_USER	root
+--generic-ssh-port	    GENERIC_SSH_PORT	22  
+```  
+
+https://blog.docker.com/2015/06/docker-machine-0-3-0-deep-dive/
+
+If you have SSH access to the machine in question, you can import it into Docker Machine like so:
+```
+$ 
+docker-machine create -d generic \
+--generic-ssh-user ubuntu \
+--generic-ssh-key ~/Downloads/manually_created_key.pub \
+--generic-ip-address 12.34.56.78 jungle
+
+docker-machine create -d generic --generic-ssh-user root \
+--generic-ip-address <ip> jungle
+```
+### Problem:
+```
+.. | sudo tee /etc/hostname
+err     : exit status 1
+output  : sudo: no tty present and no askpass program specified
+```
