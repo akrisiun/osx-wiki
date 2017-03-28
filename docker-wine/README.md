@@ -1,4 +1,4 @@
-## Docker on Virtualbox defautl machine
+## Docker on Virtualbox default machine
 
 ```
 docker-machine ls
@@ -34,9 +34,9 @@ docker run -it --net host -e DISPLAY=<ip>:0 --name totalcmd1 --memory 512mb \
 
 ### Setup
 
-$root
-
 ```
+sudo bash  
+# ????
 mkdir /home/d/.wine
 export WINEPREFIX=/home/d/.wine
 export WINEARCH win32
