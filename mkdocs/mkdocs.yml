@@ -1,0 +1,29 @@
+site_name: osx-wiki
+docs_dir : ./docs
+use_directory_urls: true
+theme: readthedocs
+markdown_extensions:
+    - smarty
+    - attr_list
+    - smarty
+    - toc:
+        permalink: True
+        separator: "_"
+pages:
+    - INDEX: 
+        - 'index': 'index.md'
+        - 'osx-wiki': 'README.md'
+        - 'mysql': 'mysql.md'
+        - 'mono': 'mono.md'      
+    - Docker:        
+        - 'swarm': 'docker/swarm.md'
+        - 'mkdocs': 'docker/mkdocs.md'        
+        - 'aspnetcore': 'docker/dotnetsrc.md'
+    - Osx:        
+        - 'brew': 'osx/brew.md'    
+    - Windows:
+        - 'Setup Windows10': 'windows/README.md'
+        - 'powershell': 'windows/powershell.md'
+    - Dotnet:
+        - 'wiki': 'dotnet/dotnet.md'
+        - '.csproj sdk': 'dotnet/csprojsdk.md'
