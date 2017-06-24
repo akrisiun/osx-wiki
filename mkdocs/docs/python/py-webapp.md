@@ -57,9 +57,3 @@ which pip
 
 pip install pgcli
 ```
-
-### copy files
-
-{host} docker run -v /path/to/hostdir:/mnt $container
-{host} docker exec -it $container bash
-{container} cp /mnt/sourcefile /path/to/destfile

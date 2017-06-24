@@ -16,9 +16,10 @@ pages:
         - 'mysql': 'mysql.md'
         - 'mono': 'mono.md'      
     - Docker:        
+        - 'mkdocs': 'docker/index.md'
         - 'swarm': 'docker/swarm.md'
-        - 'mkdocs': 'docker/mkdocs.md'        
         - 'aspnetcore': 'docker/dotnetsrc.md'
+        - 'cloud': 'docker/dockercloud.md'
     - Osx:        
         - 'brew': 'osx/brew.md'    
     - Windows:
@@ -27,3 +28,5 @@ pages:
     - Dotnet:
         - 'wiki': 'dotnet/dotnet.md'
         - '.csproj sdk': 'dotnet/csprojsdk.md'
+    - Php:
+        - 'hhwm': 'php/hhwm.md'
