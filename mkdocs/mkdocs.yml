@@ -16,14 +16,22 @@ pages:
         - 'mysql': 'mysql.md'
         - 'mono': 'mono.md'      
     - Docker:        
+        - 'mkdocs': 'docker/index.md'
         - 'swarm': 'docker/swarm.md'
-        - 'mkdocs': 'docker/mkdocs.md'        
+        - 'driver': 'docker/docker-driver.md'
         - 'aspnetcore': 'docker/dotnetsrc.md'
-    - Osx:        
-        - 'brew': 'osx/brew.md'    
+        - 'cloud': 'docker/dockercloud.md'
+        - 'chrome': 'docker/chrome.md''
+    - macOS:        
+        - 'brew': 'osx/brew.md'
+        - 'ip addr': 'osx/ipaddr.md'
+    - Debian
+        - 'ipaddr': 'debian/ipaddr.md'        
     - Windows:
         - 'Setup Windows10': 'windows/README.md'
         - 'powershell': 'windows/powershell.md'
     - Dotnet:
         - 'wiki': 'dotnet/dotnet.md'
         - '.csproj sdk': 'dotnet/csprojsdk.md'
+    - Php:
+        - 'hhwm': 'php/hhwm.md'
