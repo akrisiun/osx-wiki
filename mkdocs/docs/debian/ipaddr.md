@@ -2,6 +2,8 @@
 
 <https://www.tecmint.com/ip-command-examples/>
 
+nslookup docker.io
+
 ### eth0 address
 
 ```

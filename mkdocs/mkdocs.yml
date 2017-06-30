@@ -18,10 +18,15 @@ pages:
     - Docker:        
         - 'mkdocs': 'docker/index.md'
         - 'swarm': 'docker/swarm.md'
+        - 'driver': 'docker/docker-driver.md'
         - 'aspnetcore': 'docker/dotnetsrc.md'
         - 'cloud': 'docker/dockercloud.md'
-    - Osx:        
-        - 'brew': 'osx/brew.md'    
+        - 'chrome': 'docker/chrome.md''
+    - macOS:        
+        - 'brew': 'osx/brew.md'
+        - 'ip addr': 'osx/ipaddr.md'
+    - Debian
+        - 'ipaddr': 'debian/ipaddr.md'        
     - Windows:
         - 'Setup Windows10': 'windows/README.md'
         - 'powershell': 'windows/powershell.md'

@@ -36,9 +36,17 @@ export PATH=
 ls -l /etc/paths.d/
 
 set
-nano  
+nano  ~/.bash_profile
+export PS1='$(whoami)@$(hostname):$(pwd) $ '
+export DISPLAY=:0
+# export DOCKER_HOST=tcp://0.0.0.0:2375
 unset DOCKER_HOST
+
 # ctrl+E , ctrl+O
+
+ip addr
+ip route
+less ~/.bash_history
 ```
 
 ### adduser addgroup chown chgrp chmod
