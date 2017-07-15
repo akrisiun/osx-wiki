@@ -61,6 +61,17 @@ chgrp -R _www wwwroot
 ```
 -R recursive
 
+```
+cp -R * /var/copy
+awk 'NR > 118 && NR <= 120' <file>
+awk 'NR > 118 && NR <= 120' /etc/nginx/sites-enabled/default
+sudo nano /etc/nginx/sites-enabled/default
+sudo nginx -t
+sudo service --status-all
+sudo service nginx status
+```
+
+
 ### linux kernel and distribution version
 
 ```
