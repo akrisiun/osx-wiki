@@ -5,6 +5,16 @@
 Git was created by Linus Torvalds in 2005 for development of the Linux kernel.
 Git servers typically listen on TCP port 9418.
 
+## Cleanup before merge
+
+```
+git pull
+git clean  -d  -fx ""
+
+git fetch --all
+git reset --hard HEAD
+```
+
 ## Use cases
 
 ```

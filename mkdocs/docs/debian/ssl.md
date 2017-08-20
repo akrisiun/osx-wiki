@@ -1,6 +1,18 @@
+
+## SSHFS 
+
+https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+```
+sudo apt-get install sshfs -y
+sudo sshfs -o allow_other,defer_permissions <host> <dir>
+
+sudo rm -rf /Users
+mkdir /Users
+chown <> /Users
+sudo sshfs -o allow_other <host>:/Users /Users
+```
+
 ## SSL for nginx
-
-
 
 
 ## SSL for webmin
