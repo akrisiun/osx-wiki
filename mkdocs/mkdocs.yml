@@ -22,13 +22,13 @@ pages:
         - 'aspnetcore': 'docker/dotnetsrc.md'
         - 'cloud': 'docker/dockercloud.md'
         - 'chrome': 'docker/chrome.md'
-    - git
-        - 'git': 'git/ggit.md'
+    - git:
+        - 'git': 'git/git.md'
     - macOS:        
         - 'brew': 'osx/brew.md'
         - 'vagrant': 'osx/vagrant.md'
         - 'vboxManage': 'osx/vboxManage.md'        
-    - Debian
+    - Debian:
         - 'ip addr': 'osx/ipaddr.md'
         - 'eth0': 'debian/eth0.md'        
         - 'ssl': 'osx/ssl.md'
@@ -40,4 +40,4 @@ pages:
         - '.csproj sdk': 'dotnet/csprojsdk.md'
     - Php:
         - 'hhwm': 'php/hhwm.md'
-        - 'apache2+': 'apache2+webmin.md'
+        - 'apache2+': 'php/apache2+webmin.md'

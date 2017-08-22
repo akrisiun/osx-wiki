@@ -17,10 +17,10 @@ ps>
 netstat -atn -p TCP | findstr "ESTA"
 
 docker run -p 8002:8000 -v c:\Work_Exe\docs2:/docs        --name md8002 akrisiun/mkdocs
-docker run -p 8002:8000 -v d:\Sanitex\Exchange\Docs:/docs --name md8002 akrisiun/mkdocs
+docker run -p 8002:8000 -v d:\Beta\Docs:/docs --name md8002 akrisiun/mkdocs
 
-docker run -it -p 8002:8000 -v d:\Sanitex\Exchange\Docs:/docs --name md8002 akrisiun/mkdocs
-
+docker rm -f md8008
+docker run -it -p 8008:8000 -v d:\Beta\Owin\osx-wiki\mkdocs:/docs --name md8008 akrisiun/mkdocs
 
 docker run -it -p 8001:8000 -v c:\Work_Exe\docs:/docs --name md3 akrisiun/mkdocs1
 docker exec -it md3 /bin/sh
