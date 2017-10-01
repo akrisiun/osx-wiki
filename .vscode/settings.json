@@ -1,4 +1,18 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-	"editor.wrappingColumn": 90
+	//"editor.wrappingColumn": 90
+	"editor.wordWrapColumn": 90,
+
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/.vs*": true,
+		"*.bak": true,
+		"Debug/": true,
+		"Release/": true,
+		"obj/": true
+	}
 }

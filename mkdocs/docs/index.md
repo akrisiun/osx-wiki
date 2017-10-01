@@ -1,8 +1,5 @@
 Parts:
 
-[github.io](http://akrisiun.github.io/), <http://github.com/akrisiun/osx-wiki>,  
-<http://github.com/akrisiun/dotnet-wiki>,  <http://github.com/akrisiun/profile.win10>  
-
 macOS, Linux        | Debian, Ubuntu | Windows, .NET                            | Docker
 ------------------- | -------------- | ---------------------------------------- | ------------------------
 [README](README.md) | [ipaddr](debian/ipaddr.md) | [re-Install](windows/README) with choco  | [swarm](docker/swarm.md)
@@ -10,12 +7,6 @@ macOS, Linux        | Debian, Ubuntu | Windows, .NET                            
 [mono](mono.md)     |                            |                                          | [cloud](docker/dockercloud.md)
 [brew](osx/brew.md) |                            |                                          | [docker-driver](docker/docker-driver.md)
                     |                            |                                          | [chrome](docker/chrome.md)
-
-## Programming
-
-mono        | php  | python
------------ | ---- | -------
-mono        | php  | python
 
 # X server, remote connect 
 
@@ -37,3 +28,10 @@ tuxcmd&
 
 nslookup docker.io
 ```
+
+## Programming TODO:
+
+mono        | php  | python
+----------- | ---- | -------
+mono        | php  | python
+

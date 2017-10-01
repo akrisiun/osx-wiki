@@ -1,4 +1,3 @@
-# GIT 
 
 Hard reset for restore files (like in SVN):
 ```

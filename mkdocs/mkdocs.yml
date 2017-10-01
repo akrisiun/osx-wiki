@@ -21,11 +21,12 @@ pages:
         - 'driver': 'docker/docker-driver.md'
         - 'aspnetcore': 'docker/dotnetsrc.md'
         - 'cloud': 'docker/dockercloud.md'
-        - 'chrome': 'docker/chrome.md''
+        - 'chrome': 'docker/chrome.md'
+    - git:
+        - 'git': 'git/git.md'
     - macOS:        
         - 'brew': 'osx/brew.md'
-        - 'ip addr': 'osx/ipaddr.md'
-    - Debian
+    - Debian:
         - 'ipaddr': 'debian/ipaddr.md'        
     - Windows:
         - 'Setup Windows10': 'windows/README.md'
