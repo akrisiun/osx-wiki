@@ -26,8 +26,12 @@ pages:
         - 'git': 'git/git.md'
     - macOS:        
         - 'brew': 'osx/brew.md'
+        - 'vagrant': 'osx/vagrant.md'
+        - 'vboxManage': 'osx/vboxManage.md'        
     - Debian:
-        - 'ipaddr': 'debian/ipaddr.md'        
+        - 'ip addr': 'osx/ipaddr.md'
+        - 'eth0': 'debian/eth0.md'        
+        - 'ssl': 'osx/ssl.md'
     - Windows:
         - 'Setup Windows10': 'windows/README.md'
         - 'powershell': 'windows/powershell.md'
@@ -36,3 +40,4 @@ pages:
         - '.csproj sdk': 'dotnet/csprojsdk.md'
     - Php:
         - 'hhwm': 'php/hhwm.md'
+        - 'apache2+': 'php/apache2+webmin.md'

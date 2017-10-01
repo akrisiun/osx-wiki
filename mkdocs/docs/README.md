@@ -45,18 +45,6 @@ ps aux | grep root
 
 ### mono ASP.NET
 
-```sudo xsp4 --port 80 --root ~/public_html
 ```
-
-### MVC mono
-
-???
-
-##setup gcloud
-
-sudo nano /etc/paths.d/gcloud
-~/google-cloud-sdk/bin/gcloud
-
-curl https://sdk.cloud.google.com | bash
-~/google-cloud-sdk/bin/gcloud
-
+sudo xsp4 --port 80 --root ~/public_html
+```
