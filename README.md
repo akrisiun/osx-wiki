@@ -21,6 +21,19 @@ Docker & cloud virtual machines
 [vm/gcloud](vm/gcloud.md)
 
 # Linux introduction, common setup steps:
+
+### enable ssh autostart
+
+Script rc.local executes at each runlevel change  
+1) edit /etc/rc.local file (sudo nano /etc/rc.local)  
+2) just above last command (exit 0) add a line to start ssh (/etc/init.d/ssh start)  
+```
+sudo nano /etc/rc.local
+sudo echo "/etc/init.d/ssh start" >> /etc/rc.local
+
+sudo /etc/init.d/ssh status
+```
+
 ### set path, editor
 
 [cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable](
