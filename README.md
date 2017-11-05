@@ -22,6 +22,9 @@ Docker & cloud virtual machines
 
 # Linux introduction, common setup steps:
 
+from scratch:  
+http://moi.vonos.net/linux/linux-from-scratch/  | http://www.linuxfromscratch.org/  
+
 ### enable ssh autostart
 
 Script rc.local executes at each runlevel change  
