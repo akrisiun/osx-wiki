@@ -1,24 +1,25 @@
 ## osx + linux wiki
 
 parts:  
-[eth0.md](mkdocs/docs/eth0.md), 
-[cntlm.md](mkdocs/docs/cntlm.md), 
-[apache2+webmin.md](mkdocs/docs/apache2+webmin.md)  
+[eth0.md](mkdocs/docs/debian/eth0.md), 
 [ftp.md](mkdocs/docs/ftp.md)
 [vboxManage.md](mkdocs/docs/vboxManage.md)
   
-GIT source versions system  
+GIT source versions system:  
 [git](mkdocs/docs/git.md)
 [git submodules](mkdocs/docs/git-submodules.md)
 
-.NET  
-[mono.md](mkdocs/docs/mono.md)
+.NET:  
+[mono.md](mkdocs/mono.md)
 [libuv-make.cmd](mkdocs/docs/libuv-make.cmd)  
 
-Docker & cloud virtual machines  
+Docker & cloud virtual machines:  
 [docker-wiki](mkdocs/docs/docker-wiki.md), 
 [odoo-postgres](mkdocs/docs/odoo-postgres.md)  
 [vm/gcloud](vm/gcloud.md)
+Proxy:  
+[cntlm.md](mkdocs/docs/cntlm.md), 
+[apache2+webmin.md](mkdocs/docs/apache2+webmin.md)  
 
 # Linux introduction, common setup steps:
 
