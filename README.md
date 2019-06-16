@@ -1,23 +1,23 @@
 ## osx + linux wiki
 
 parts:  
-[eth0.md](eth0.md), 
-[cntlm.md](cntlm.md), 
-[apache2+webmin.md](apache2+webmin.md)  
-[ftp.md](ftp.md)
-[vboxManage.md](vboxManage.md)
+[eth0.md](mkdocs/docs/eth0.md), 
+[cntlm.md](mkdocs/docs/cntlm.md), 
+[apache2+webmin.md](mkdocs/docs/apache2+webmin.md)  
+[ftp.md](mkdocs/docs/ftp.md)
+[vboxManage.md](mkdocs/docs/vboxManage.md)
   
 GIT source versions system  
-[git](git.md)
-[git submodules](git-submodules.md)
+[git](mkdocs/docs/git.md)
+[git submodules](mkdocs/docs/git-submodules.md)
 
 .NET  
-[mono.md](mono.md)
-[libuv-make.cmd](libuv-make.cmd)  
+[mono.md](mkdocs/docs/mono.md)
+[libuv-make.cmd](mkdocs/docs/libuv-make.cmd)  
 
 Docker & cloud virtual machines  
-[docker-wiki](docker-wiki.md), 
-[odoo-postgres](odoo-postgres.md)  
+[docker-wiki](mkdocs/docs/docker-wiki.md), 
+[odoo-postgres](mkdocs/docs/odoo-postgres.md)  
 [vm/gcloud](vm/gcloud.md)
 
 # Linux introduction, common setup steps:
@@ -25,7 +25,7 @@ Docker & cloud virtual machines
 from scratch:  
 http://moi.vonos.net/linux/linux-from-scratch/  | http://www.linuxfromscratch.org/  
 
-### enable ssh autostart
+### Debian/Ubuntu enable ssh autostart
 
 Script rc.local executes at each runlevel change  
 1) edit /etc/rc.local file (sudo nano /etc/rc.local)  
@@ -42,6 +42,7 @@ sudo /etc/init.d/ssh status
 [cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable](
     http://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/)
 .bash
+
 ```
 # enviroment
 env
