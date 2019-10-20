@@ -1,31 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.138
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{159081F8-9DBB-48F4-8D7A-D7717C7C8675}"
 	ProjectSection(SolutionItems) = preProject
-		src\build.cmd = src\build.cmd
-		src\Common.props = src\Common.props
-		src\Common.targets = src\Common.targets
-		src\NuGet.config = src\NuGet.config
-		src\README.md = src\README.md
+		docker-wiki.md = docker-wiki.md
+		git-pull.cmd = git-pull.cmd
+		git-reset.cmd = git-reset.cmd
+		params.json = params.json
+		README.md = README.md
+		vsbuild.md = vsbuild.md
+		vstest.console.cmd = vstest.console.cmd
+		wine.md = wine.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web", "web.csproj", "{42A4009D-E202-4ECB-8B51-306B5E66B6B1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{F529CAE7-4AC1-469C-A595-AD1B8DE8F574}"
+	ProjectSection(SolutionItems) = preProject
+		debian\docker-wine\build.sh = debian\docker-wine\build.sh
+		debian\docker-wine\Dockerfile = debian\docker-wine\Dockerfile
+		debian\docker-wine\run-ssh.sh = debian\docker-wine\run-ssh.sh
+		debian\docker-wine\run.sh = debian\docker-wine\run.sh
+	EndProjectSection
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42A4009D-E202-4ECB-8B51-306B5E66B6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42A4009D-E202-4ECB-8B51-306B5E66B6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42A4009D-E202-4ECB-8B51-306B5E66B6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42A4009D-E202-4ECB-8B51-306B5E66B6B1}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B75BE04-38F5-45D0-A5FE-7F144979433F}
 	EndGlobalSection
 EndGlobal

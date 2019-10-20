@@ -1,6 +1,7 @@
 ## Wine 2.0.* for MacOS
 
 setup task 
+
 ```
 WINEPREFIX="$HOME/bin/wine" WINEARCH=win32 wine wineboot
 brew install -y wine
